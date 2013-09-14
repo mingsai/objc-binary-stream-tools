@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC442AA617E4D89800F773A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC442AA517E4D89800F773A9 /* Foundation.framework */; };
+		EC442AB417E4D89800F773A9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC442AB317E4D89800F773A9 /* XCTest.framework */; };
+		EC442AB517E4D89800F773A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC442AA517E4D89800F773A9 /* Foundation.framework */; };
+		EC442AB717E4D89800F773A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC442AB617E4D89800F773A9 /* UIKit.framework */; };
+		EC442ABA17E4D89800F773A9 /* libBinaryTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC442AA217E4D89800F773A9 /* libBinaryTools.a */; };
+		EC442AC017E4D89800F773A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC442ABE17E4D89800F773A9 /* InfoPlist.strings */; };
+		EC442AC217E4D89800F773A9 /* BinaryToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC442AC117E4D89800F773A9 /* BinaryToolsTests.m */; };
+		EC442AD117E4D90700F773A9 /* BTBinaryStreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC442ACE17E4D90700F773A9 /* BTBinaryStreamReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EC442AD217E4D90700F773A9 /* BTBinaryStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC442AD017E4D90700F773A9 /* BTBinaryStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC442AB817E4D89800F773A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC442A9A17E4D89800F773A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC442AA117E4D89800F773A9;
+			remoteInfo = BinaryTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC442AA017E4D89800F773A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EC442AA217E4D89800F773A9 /* libBinaryTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBinaryTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC442AA517E4D89800F773A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC442AA917E4D89800F773A9 /* BinaryTools-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BinaryTools-Prefix.pch"; sourceTree = "<group>"; };
+		EC442AB217E4D89800F773A9 /* BinaryToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC442AB317E4D89800F773A9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC442AB617E4D89800F773A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EC442ABD17E4D89800F773A9 /* BinaryToolsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BinaryToolsTests-Info.plist"; sourceTree = "<group>"; };
+		EC442ABF17E4D89800F773A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC442AC117E4D89800F773A9 /* BinaryToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryToolsTests.m; sourceTree = "<group>"; };
+		EC442ACB17E4D90700F773A9 /* BTBinaryTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBinaryTools.h; sourceTree = "<group>"; };
+		EC442ACC17E4D90700F773A9 /* BTBinaryToolsErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBinaryToolsErrors.h; sourceTree = "<group>"; };
+		EC442ACD17E4D90700F773A9 /* BTBinaryStreamReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBinaryStreamReader.h; sourceTree = "<group>"; };
+		EC442ACE17E4D90700F773A9 /* BTBinaryStreamReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBinaryStreamReader.m; sourceTree = "<group>"; };
+		EC442ACF17E4D90700F773A9 /* BTBinaryStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBinaryStreamWriter.h; sourceTree = "<group>"; };
+		EC442AD017E4D90700F773A9 /* BTBinaryStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBinaryStreamWriter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC442A9F17E4D89800F773A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC442AA617E4D89800F773A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC442AAF17E4D89800F773A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC442ABA17E4D89800F773A9 /* libBinaryTools.a in Frameworks */,
+				EC442AB417E4D89800F773A9 /* XCTest.framework in Frameworks */,
+				EC442AB717E4D89800F773A9 /* UIKit.framework in Frameworks */,
+				EC442AB517E4D89800F773A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC442A9917E4D89800F773A9 = {
+			isa = PBXGroup;
+			children = (
+				EC442AA717E4D89800F773A9 /* BinaryTools */,
+				EC442ABB17E4D89800F773A9 /* BinaryToolsTests */,
+				EC442AA417E4D89800F773A9 /* Frameworks */,
+				EC442AA317E4D89800F773A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC442AA317E4D89800F773A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC442AA217E4D89800F773A9 /* libBinaryTools.a */,
+				EC442AB217E4D89800F773A9 /* BinaryToolsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC442AA417E4D89800F773A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC442AA517E4D89800F773A9 /* Foundation.framework */,
+				EC442AB317E4D89800F773A9 /* XCTest.framework */,
+				EC442AB617E4D89800F773A9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC442AA717E4D89800F773A9 /* BinaryTools */ = {
+			isa = PBXGroup;
+			children = (
+				EC442ACB17E4D90700F773A9 /* BTBinaryTools.h */,
+				EC442ACC17E4D90700F773A9 /* BTBinaryToolsErrors.h */,
+				EC442ACD17E4D90700F773A9 /* BTBinaryStreamReader.h */,
+				EC442ACE17E4D90700F773A9 /* BTBinaryStreamReader.m */,
+				EC442ACF17E4D90700F773A9 /* BTBinaryStreamWriter.h */,
+				EC442AD017E4D90700F773A9 /* BTBinaryStreamWriter.m */,
+				EC442AA817E4D89800F773A9 /* Supporting Files */,
+			);
+			path = BinaryTools;
+			sourceTree = "<group>";
+		};
+		EC442AA817E4D89800F773A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC442AA917E4D89800F773A9 /* BinaryTools-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC442ABB17E4D89800F773A9 /* BinaryToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC442AC117E4D89800F773A9 /* BinaryToolsTests.m */,
+				EC442ABC17E4D89800F773A9 /* Supporting Files */,
+			);
+			path = BinaryToolsTests;
+			sourceTree = "<group>";
+		};
+		EC442ABC17E4D89800F773A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC442ABD17E4D89800F773A9 /* BinaryToolsTests-Info.plist */,
+				EC442ABE17E4D89800F773A9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC442AA117E4D89800F773A9 /* BinaryTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC442AC517E4D89800F773A9 /* Build configuration list for PBXNativeTarget "BinaryTools" */;
+			buildPhases = (
+				EC442A9E17E4D89800F773A9 /* Sources */,
+				EC442A9F17E4D89800F773A9 /* Frameworks */,
+				EC442AA017E4D89800F773A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryTools;
+			productName = BinaryTools;
+			productReference = EC442AA217E4D89800F773A9 /* libBinaryTools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EC442AB117E4D89800F773A9 /* BinaryToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC442AC817E4D89800F773A9 /* Build configuration list for PBXNativeTarget "BinaryToolsTests" */;
+			buildPhases = (
+				EC442AAE17E4D89800F773A9 /* Sources */,
+				EC442AAF17E4D89800F773A9 /* Frameworks */,
+				EC442AB017E4D89800F773A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC442AB917E4D89800F773A9 /* PBXTargetDependency */,
+			);
+			name = BinaryToolsTests;
+			productName = BinaryToolsTests;
+			productReference = EC442AB217E4D89800F773A9 /* BinaryToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC442A9A17E4D89800F773A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = EC442A9D17E4D89800F773A9 /* Build configuration list for PBXProject "BinaryTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC442A9917E4D89800F773A9;
+			productRefGroup = EC442AA317E4D89800F773A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC442AA117E4D89800F773A9 /* BinaryTools */,
+				EC442AB117E4D89800F773A9 /* BinaryToolsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC442AB017E4D89800F773A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC442AC017E4D89800F773A9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC442A9E17E4D89800F773A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC442AD217E4D90700F773A9 /* BTBinaryStreamWriter.m in Sources */,
+				EC442AD117E4D90700F773A9 /* BTBinaryStreamReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC442AAE17E4D89800F773A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC442AC217E4D89800F773A9 /* BinaryToolsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC442AB917E4D89800F773A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC442AA117E4D89800F773A9 /* BinaryTools */;
+			targetProxy = EC442AB817E4D89800F773A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC442ABE17E4D89800F773A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC442ABF17E4D89800F773A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC442AC317E4D89800F773A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC442AC417E4D89800F773A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC442AC617E4D89800F773A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BinaryTools.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryTools/BinaryTools-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EC442AC717E4D89800F773A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BinaryTools.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryTools/BinaryTools-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EC442AC917E4D89800F773A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryTools/BinaryTools-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BinaryToolsTests/BinaryToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC442ACA17E4D89800F773A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryTools/BinaryTools-Prefix.pch";
+				INFOPLIST_FILE = "BinaryToolsTests/BinaryToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC442A9D17E4D89800F773A9 /* Build configuration list for PBXProject "BinaryTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC442AC317E4D89800F773A9 /* Debug */,
+				EC442AC417E4D89800F773A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC442AC517E4D89800F773A9 /* Build configuration list for PBXNativeTarget "BinaryTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC442AC617E4D89800F773A9 /* Debug */,
+				EC442AC717E4D89800F773A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC442AC817E4D89800F773A9 /* Build configuration list for PBXNativeTarget "BinaryToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC442AC917E4D89800F773A9 /* Debug */,
+				EC442ACA17E4D89800F773A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC442A9A17E4D89800F773A9 /* Project object */;
+}
