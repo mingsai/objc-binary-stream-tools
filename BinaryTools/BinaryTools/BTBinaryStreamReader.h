@@ -7,7 +7,7 @@
 -(id)initWithStream:(NSInputStream*)inputStream andSourceByteOrder:(CFByteOrder)streamByteOrder;
 -(id)initWithData:(NSData*)data andSourceByteOrder:(CFByteOrder)streamByteOrder;
 
--(NSError*)getError;
+-(NSError*)lastError;
 
 -(int8_t)readInt8;
 -(uint8_t)readUInt8;

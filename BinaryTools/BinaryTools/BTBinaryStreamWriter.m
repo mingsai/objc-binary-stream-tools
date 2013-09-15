@@ -13,7 +13,7 @@ NSString* BTBinaryStreamErrorDomain = @"BTBinaryStreamErrorDomain";
     uint64_t (*convert_uint64_t)(uint64_t);
 }
 
-@property (nonatomic, retain, getter = getError) NSError* error;
+@property (nonatomic, retain, getter = lastError) NSError* error;
 
 @end
 

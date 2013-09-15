@@ -32,6 +32,6 @@
  */
 -(void)writeString:(NSString*)string withEncoding:(NSStringEncoding)encoding;
 
--(NSError*)getError;
+-(NSError*)lastError;
 
 @end

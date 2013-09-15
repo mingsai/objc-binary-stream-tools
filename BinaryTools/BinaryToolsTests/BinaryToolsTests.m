@@ -40,7 +40,7 @@
     NSString* resultString = [reader readStringWithEncoding:NSUTF32BigEndianStringEncoding andLength:[utf8ByteString length]];
     XCTAssertNil(resultString);
     
-    NSError* readError = [reader getError];
+    NSError* readError = [reader lastError];
     XCTAssertNotNil(readError);
     XCTAssertEqual(readError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(readError.code, BTBinaryStreamReaderStringDecodingError);
@@ -54,7 +54,7 @@
     
     [reader readInt8];
     
-    NSError* readError = [reader getError];
+    NSError* readError = [reader lastError];
     XCTAssertNotNil(readError);
     XCTAssertEqual(readError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(readError.code, BTBinaryStreamReaderEndOfStream);
@@ -69,7 +69,7 @@
     
     [reader readInt32];
     
-    NSError* readError = [reader getError];
+    NSError* readError = [reader lastError];
     XCTAssertNotNil(readError);
     XCTAssertEqual(readError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(readError.code, BTBinaryStreamReaderNotEnoughBytesRead);
@@ -84,7 +84,7 @@
     
     [reader readInt8];
     
-    NSError* readError = [reader getError];
+    NSError* readError = [reader lastError];
     XCTAssertNotNil(readError);
     XCTAssertEqual(readError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(readError.code, BTBinaryStreamOperationError);
@@ -99,7 +99,7 @@
     
     [writer writeString:unicodeString withEncoding:NSASCIIStringEncoding];
     
-    NSError* writeError = [writer getError];
+    NSError* writeError = [writer lastError];
     XCTAssertNotNil(writeError);
     XCTAssertEqual(writeError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(writeError.code, BTBinaryStreamWriterStringEncodingError);
@@ -113,11 +113,11 @@
     BTBinaryStreamWriter* writer = [[BTBinaryStreamWriter alloc] initWithStream:outputStream andDesiredByteOrder:CFByteOrderGetCurrent()];
     
     [writer writeInt8:0xFF];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeInt8:0xFF];
     
-    NSError* writeError = [writer getError];
+    NSError* writeError = [writer lastError];
     XCTAssertNotNil(writeError);
     XCTAssertEqual(writeError.domain, BTBinaryStreamErrorDomain);
     
@@ -135,7 +135,7 @@
     
     [writer writeInt32:0x12345678];
     
-    NSError* writeError = [writer getError];
+    NSError* writeError = [writer lastError];
     XCTAssertNotNil(writeError);
     XCTAssertEqual(writeError.domain, BTBinaryStreamErrorDomain);
     
@@ -151,7 +151,7 @@
     
     [writer writeInt8:0xFF];
     
-    NSError* writeError = [writer getError];
+    NSError* writeError = [writer lastError];
     XCTAssertNotNil(writeError);
     XCTAssertEqual(writeError.domain, BTBinaryStreamErrorDomain);
     XCTAssertEqual(writeError.code, BTBinaryStreamOperationError);
@@ -181,41 +181,41 @@
     BTBinaryStreamWriter* writer = [[BTBinaryStreamWriter alloc] initWithStream:outputStream andDesiredByteOrder:byteOrder];
     
     [writer writeInt8:i8];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeUInt8:ui8];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeInt16:i16];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeUInt16:ui16];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeInt32:i32];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeUInt32:ui32];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeInt64:i64];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeUInt64:ui64];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeFloat:f];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeDouble:d];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     NSUInteger sizeOfString = [unicodeString lengthOfBytesUsingEncoding:stringEncoding];
     [writer writeUInt32:sizeOfString];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     [writer writeString:unicodeString withEncoding:stringEncoding];
-    XCTAssertNil([writer getError]);
+    XCTAssertNil([writer lastError]);
     
     NSData* outputData = [outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
     
@@ -224,41 +224,41 @@
     BTBinaryStreamReader* reader = [[BTBinaryStreamReader alloc] initWithStream:inputStream andSourceByteOrder:byteOrder];
     
     XCTAssertEqual([reader readInt8], i8);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readUInt8], ui8);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readInt16], i16);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readUInt16], ui16);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readInt32], i32);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readUInt32], ui32);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readInt64], i64);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readUInt64], ui64);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readFloat], f);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     XCTAssertEqual([reader readDouble], d);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     
     NSUInteger sizeOfStoredString = [reader readUInt32];
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
     XCTAssertEqual(sizeOfString, sizeOfStoredString);
     
     XCTAssertEqualObjects(unicodeString, [reader readStringWithEncoding:stringEncoding andLength:sizeOfStoredString]);
-    XCTAssertNil([reader getError]);
+    XCTAssertNil([reader lastError]);
 }
 
 @end
