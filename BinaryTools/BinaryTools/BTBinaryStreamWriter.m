@@ -72,7 +72,7 @@ NSString* BTBinaryStreamErrorDomain = @"BTBinaryStreamErrorDomain";
     } else if (written == 0) { \
         self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamWriterEndOfStream userInfo:nil]; \
     } else if (written < expected) { \
-        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamWriterNotAllBytesWritten userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Expected to write %zu bytes, wrote %d bytes.", expected, written]}]; \
+        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamWriterNotAllBytesWritten userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Expected to write %lu bytes, wrote %ld bytes.", (unsigned long)expected, (long)written]}]; \
     } \
 } while (0)
 
@@ -117,7 +117,7 @@ GENERATE_METHOD(Double, double, uint64_t)
     {
         self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain
                                          code:BTBinaryStreamWriterStringEncodingError
-                                     userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Error in encoding string with encoding: %d", encoding]}];
+                                     userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Error in encoding string with encoding: %lu", (unsigned long)encoding]}];
     }
     else
     {

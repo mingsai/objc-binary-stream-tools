@@ -211,7 +211,7 @@
     XCTAssertNil([writer lastError]);
     
     NSUInteger sizeOfString = [unicodeString lengthOfBytesUsingEncoding:stringEncoding];
-    [writer writeUInt32:sizeOfString];
+    [writer writeUInt32:(uint32_t)sizeOfString];
     XCTAssertNil([writer lastError]);
     
     [writer writeString:unicodeString withEncoding:stringEncoding];

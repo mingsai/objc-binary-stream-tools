@@ -13,7 +13,6 @@ Features
 Known issues
 ------------
 
-* Compilation on x64 works, but emits formatting warnings and failed tests due to type mismatches (no logic errors AFAIK).
 * Error handling may be cumbersome in some situations.
 
 License

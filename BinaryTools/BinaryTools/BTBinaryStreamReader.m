@@ -92,7 +92,7 @@
     } \
     else if (readResult > 0 && readResult < valueSize) \
     { \
-        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamReaderNotEnoughBytesRead userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Needed to read %zu bytes, but read only %d.", valueSize, readResult]}]; \
+        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamReaderNotEnoughBytesRead userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Needed to read %zu bytes, but read only %lu.", (unsigned long)valueSize, readResult]}]; \
     } \
     \
     internalValue = convert_##internal_type(internalValue); \
@@ -132,7 +132,7 @@ GENERATE_METHOD(Double, double, uint64_t)
     else if (numberOfByteRead > 0)
     {
         result = [NSData dataWithBytes:readBuffer length:numberOfByteRead];
-        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamReaderNotEnoughBytesRead userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Needed to read %d bytes, but read only %d.", bytesToRead, numberOfByteRead]}];
+        self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain code:BTBinaryStreamReaderNotEnoughBytesRead userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Needed to read %lu bytes, but read only %ld.", (unsigned long)bytesToRead, (long)numberOfByteRead]}];
         free(readBuffer);
     }
     else if (numberOfByteRead == 0)
@@ -166,7 +166,7 @@ GENERATE_METHOD(Double, double, uint64_t)
     {
         self.error = [NSError errorWithDomain:BTBinaryStreamErrorDomain
                                          code:BTBinaryStreamReaderStringDecodingError
-                                     userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Error decoding string with encoding: %d", stringEncoding]}];
+                                     userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Error decoding string with encoding: %lu", (unsigned long)stringEncoding]}];
     }
     
     return result;
